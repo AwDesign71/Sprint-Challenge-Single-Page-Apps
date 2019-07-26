@@ -1,11 +1,19 @@
 import React from 'react'
-import LocationsList from './LocationsList';
-export default function LocationCard ({ name, type, dimension, residents }) {
-  // image={image}
+import styled from 'styled-components';
+const Card = styled.div `
+ width: 350px;
+ height: 120px;
+ border: 1px solid #000;
+`
 
+export default function LocationCard (props) {
+  // image={image}
   return (
-    <div>
-{/*       <h3>{name.location}</h3>
- */}    </div>
+    <Card>
+      <p>{props.location.name}</p>
+      <p>{props.location.type}</p>
+      <p>{props.location.dimension}</p>
+
+    </Card>
   )
 }
