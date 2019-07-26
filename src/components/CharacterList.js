@@ -12,7 +12,6 @@ export default function CharacterList(props) {
      axios.get(`https://rickandmortyapi.com/api/character/`)
      .then(res=> {
        setCharacters(res.data.results)
-       console.log(res.data.results)
      }
       ).catch(err=>{
         console.log(err);
@@ -22,7 +21,7 @@ export default function CharacterList(props) {
   return (<section className='character-list grid-view'>
 
       <h2></h2>
-      {characters.map(character=><CharacterCard key={character.id} character={character} />)}
+      {characters.map(character=><CharacterCard key={character.id} character={character} props={character.image} />)}
       
     </section>
   )

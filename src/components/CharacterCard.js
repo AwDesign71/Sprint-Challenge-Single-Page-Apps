@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function CharacterCard (props) {
+export default function CharacterCard ({props}) {
   return (
             <div>
            <span></span>
-           <img src={props.character.image} alt='Images' />
-          <h3>{props.character.name}</h3>
+           <img src={props} alt='Images' />
+          <h3>{props}</h3>
           </div>
     )
 }
